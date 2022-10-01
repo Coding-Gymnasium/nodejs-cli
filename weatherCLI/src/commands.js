@@ -8,8 +8,6 @@ export const fetchNow = async (city) => {
     `http://api.weatherstack.com/current?access_key=${APIXU_KEY}&query=${city}`
   );
   const data = await response.json();
-  console.log('Data: ', data)
-
   const now = {
     location: data.location.name,
     region: data.location.region,
